@@ -1,11 +1,69 @@
-<header>
-    <div class="flex items-center justify-center bg-blue-200 h-[15vh]">
-        <h1 class="text-center">Cinnamon</h1>
-    </div>
-<div class="bg-gray-200">
-    <ul class="flex items-center justify-center gap-4 p-4">
-        <li routerLink="/" class="transition-colors duration-200 hover:bg-gray-600 hover:bg-opacity-90 hover:text-white px-3 py-1 cursor-pointer">Home</li>
-        <li routerLink="/menu" class="transition-colors duration-200 hover:bg-gray-600 hover:bg-opacity-90 hover:text-white px-3 py-1 cursor-pointer">Menu</li>
+<header class="sticky top-0 z-50 bg-amber-100 shadow-md" (window:keydown.escape)="isMenuOpen = false">
+  <!-- Branding Section -->
+  <div class="flex items-center justify-between px-6 py-4 max-w-screen-xl mx-auto">
+    <!-- Logo + Title -->
+    <a routerLink="/" class="flex items-center gap-4">
+      <!-- Inline SVG to avoid asset path issues -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="h-12 w-12" role="img" aria-label="Cinnamon logo">
+        <defs>
+          <linearGradient id="hdr-bg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#FDE68A"/>
+            <stop offset="100%" stop-color="#F59E0B"/>
+          </linearGradient>
+          <linearGradient id="hdr-stick" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#8B5E3C"/>
+            <stop offset="100%" stop-color="#6B3F23"/>
+          </linearGradient>
+        </defs>
+        <rect x="2" y="2" width="60" height="60" rx="14" ry="14" fill="url(#hdr-bg)" />
+        <path fill="none" stroke="#7C3F1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+              d="M20 36c0-8 6-14 14-14s14 6 14 14-6 14-14 14c-5 0-9-3-11-7" opacity="0.9"/>
+        <g transform="rotate(-20 32 32)">
+          <rect x="16" y="18" width="28" height="6" rx="3" fill="url(#hdr-stick)"/>
+          <rect x="18" y="26" width="28" height="6" rx="3" fill="url(#hdr-stick)"/>
+        </g>
+        <path d="M12 18c4-6 14-10 20-10" fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <h1 class="text-3xl font-serif text-cinnamon-brown leading-snug">Cinnamon</h1>
+        <p class="text-sm italic text-gray-700 tracking-wide">Where Indian tradition meets five-star innovation.</p>
+      </div>
+    </a>
+
+    <!-- Mobile Toggle -->
+    <button
+      class="md:hidden text-cinnamon-brown focus:outline-none"
+      (click)="isMenuOpen = !isMenuOpen"
+      aria-label="Toggle navigation"
+      [attr.aria-expanded]="isMenuOpen"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Backdrop for Mobile Nav -->
+  <div *ngIf="isMenuOpen" class="fixed inset-0 bg-black bg-opacity-25 z-40 md:hidden" (click)="isMenuOpen = false"></div>
+
+  <!-- Navigation -->
+  <nav role="navigation" aria-label="Main navigation" class="bg-gray-200 z-50 relative">
+    <ul
+      class="flex-col md:flex-row items-center justify-center gap-4 p-4 text-lg font-medium transition-all duration-300 ease-in-out"
+      [ngClass]="{ 'hidden': !isMenuOpen, 'flex': isMenuOpen, 'md:flex': true }"
+    >
+      <li *ngFor="let link of navLinks">
+        <a
+          [routerLink]="link.path"
+          routerLinkActive="text-cinnamon-brown font-bold"
+          class="transition-colors duration-200 hover:bg-gray-600 hover:bg-opacity-90 hover:text-white px-3 py-1 cursor-pointer"
+          (click)="isMenuOpen = false"
+        >
+          {{ link.label }}
+        </a>
+      </li>
     </ul>
-</div>
+  </nav>
 </header>

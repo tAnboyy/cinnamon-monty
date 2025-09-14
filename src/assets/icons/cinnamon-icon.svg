@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Cinnamon Icon</title>
+  <desc id="desc">Stylized cinnamon swirl inside a rounded square</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="stick" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8B5E3C"/>
+      <stop offset="100%" stop-color="#6B3F23"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect x="2" y="2" width="60" height="60" rx="14" ry="14" fill="url(#bg)" />
+
+  <!-- Cinnamon swirl -->
+  <path fill="none" stroke="#7C3F1B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+        d="M20 36c0-8 6-14 14-14s14 6 14 14-6 14-14 14c-5 0-9-3-11-7" opacity="0.9"/>
+
+  <!-- Cinnamon sticks -->
+  <g transform="rotate(-20 32 32)">
+    <rect x="16" y="18" width="28" height="6" rx="3" fill="url(#stick)"/>
+    <rect x="18" y="26" width="28" height="6" rx="3" fill="url(#stick)"/>
+  </g>
+
+  <!-- Subtle highlight -->
+  <path d="M12 18c4-6 14-10 20-10" fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="3" stroke-linecap="round"/>
+</svg>
+

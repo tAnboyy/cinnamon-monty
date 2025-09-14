@@ -1,4 +1,9 @@
-<div class="text-center bg-blue-200 m-5 p-15">
-    <h3>{{ item?.title }} </h3>
-    <p> {{item?.price}} </p>
+<div class="menu-card" role="group">
+  <div class="line">
+    <span class="title">{{ item?.title }}</span>
+    <span class="dots" aria-hidden="true"></span>
+    <span class="price">{{ item?.price | currency:'USD':'symbol':'1.2-2' }}</span>
+  </div>
+  
 </div>
+

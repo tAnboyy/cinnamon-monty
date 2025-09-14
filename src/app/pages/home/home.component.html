@@ -1,0 +1,60 @@
+<header class="hero">
+  <div class="hero-inner">
+    <h1 class="hero-title">Cinnamon Monty</h1>
+    <p class="hero-subtitle">Authentic Indian flavors, crafted with heart</p>
+    <div class="hero-ctas">
+      <a class="btn primary" href="/menu" (click)="$event.preventDefault(); scrollToTop(); location.assign('/menu')">View Menu</a>
+      <a class="btn subtle" href="tel:+1-000-000-0000">Call To Order</a>
+    </div>
+  </div>
+</header>
+
+<section class="highlights">
+  <div class="highlights-grid">
+    <article class="tile">
+      <div class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3 6h18v2H3V6m2 4h14v8H5v-8m2 2v4h10v-4H7Z"/></svg>
+      </div>
+      <h3>Dine-In Comfort</h3>
+      <p>Warm ambiance with attentive service for every occasion.</p>
+    </article>
+    <article class="tile">
+      <div class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M20 8h-3V4H7v4H4l8 8 8-8M7 20h10v-2H7v2Z"/></svg>
+      </div>
+      <h3>Catering & Events</h3>
+      <p>From intimate gatherings to grand celebrations—tastefully done.</p>
+    </article>
+    <article class="tile">
+      <div class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 2a10 10 0 0 0-7.07 17.07l1.41-1.41A8 8 0 1 1 20 12h-2l3 3 3-3h-2A10 10 0 0 0 12 2Z"/></svg>
+      </div>
+      <h3>Order Ahead</h3>
+      <p>Quick pickup—your favorites fresh and ready on time.</p>
+    </article>
+  </div>
+  
+</section>
+
+<section class="featured">
+  <h2 class="section-title"><span>Explore Our Menu</span></h2>
+  <div class="chips">
+    <a *ngFor="let cat of featured" class="chip" [href]="'/menu#' + cat.id">{{ cat.label }}</a>
+  </div>
+  <div class="note">Discover the full menu by category and chef specials.</div>
+</section>
+
+<section class="visit">
+  <div class="visit-card">
+    <div class="visit-info">
+      <h3>Visit Us</h3>
+      <p>123 Spice Lane, Your City, ST</p>
+      <p>Mon–Thu: 11am–9pm · Fri–Sun: 11am–10pm</p>
+    </div>
+    <div class="visit-actions">
+      <a class="btn primary" href="/menu" (click)="$event.preventDefault(); scrollToTop(); location.assign('/menu')">See Menu</a>
+      <a class="btn subtle" href="https://maps.google.com" target="_blank" rel="noopener">Directions</a>
+    </div>
+  </div>
+</section>
+

@@ -1,11 +1,40 @@
-<div class="flex">
-    <menu-categories class="bg-blue-200 m-2" *ngFor="let category of menuCategories" [category]="category[0].toString()"/>
-</div>
-<div class="flex flex-wrap p-20">
-    <div *ngFor="let category of menuCategories">
-        <h2 [id]="category[0]" class="text-center">{{category[0]}}</h2>
-        <div class="flex flex-wrap gap-4">
-            <app-menu-item-card class="flex-1" [item]="item" *ngFor="let item of category[1]"/>
-        </div>
+<header class="hero">
+  <div class="hero-inner">
+    <h1 class="hero-title">Our Menu</h1>
+    <p class="hero-subtitle">Authentic flavors crafted with care</p>
+  </div>
+  
+</header>
+
+<nav class="category-nav" aria-label="Menu sections">
+  <div class="chips" role="tablist">
+    <button
+      *ngFor="let cat of categories"
+      class="chip"
+      role="tab"
+      type="button"
+      [attr.aria-controls]="cat.id"
+      [attr.aria-selected]="activeCategoryId === cat.id"
+      [class.active]="activeCategoryId === cat.id"
+      (click)="scrollToCategory(cat.id)">
+      {{ cat.label }}
+    </button>
+  </div>
+</nav>
+
+<main class="menu-sections">
+  <section
+    *ngFor="let cat of categories"
+    class="menu-section"
+    [attr.id]="cat.id"
+    #categorySection>
+    <h2 class="section-title"><span>{{ cat.label }}</span></h2>
+
+    <div class="items-grid">
+      <app-menu-item-card
+        *ngFor="let item of cat.items"
+        [item]="item">
+      </app-menu-item-card>
     </div>
-</div>
+  </section>
+</main>
