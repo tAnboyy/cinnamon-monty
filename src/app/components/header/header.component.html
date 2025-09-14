@@ -1,4 +1,4 @@
-<header class="sticky top-0 z-50 bg-amber-100 shadow-md" (window:keydown.escape)="isMenuOpen = false">
+<header #siteHeader class="sticky top-0 z-50 bg-amber-100 shadow-md" (window:keydown.escape)="isMenuOpen = false">
   <!-- Branding Section -->
   <div class="flex items-center justify-between px-6 py-4 max-w-screen-xl mx-auto">
     <!-- Logo + Title -->
@@ -58,6 +58,7 @@
         <a
           [routerLink]="link.path"
           routerLinkActive="text-cinnamon-brown font-bold"
+          [routerLinkActiveOptions]="link.path === '/' ? { exact: true } : { exact: false }"
           class="transition-colors duration-200 hover:bg-gray-600 hover:bg-opacity-90 hover:text-white px-3 py-1 cursor-pointer"
           (click)="isMenuOpen = false"
         >

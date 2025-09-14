@@ -6,35 +6,54 @@
   
 </header>
 
-<nav class="category-nav" aria-label="Menu sections">
-  <div class="chips" role="tablist">
-    <button
-      *ngFor="let cat of categories"
-      class="chip"
-      role="tab"
-      type="button"
-      [attr.aria-controls]="cat.id"
-      [attr.aria-selected]="activeCategoryId === cat.id"
-      [class.active]="activeCategoryId === cat.id"
-      (click)="scrollToCategory(cat.id)">
-      {{ cat.label }}
-    </button>
-  </div>
-</nav>
+<div class="menu-layout">
+  <!-- Desktop/tablet: sticky left sidebar -->
+  <aside class="category-sidebar" aria-label="Menu sections">
+    <ul class="category-list" role="tablist">
+      <li *ngFor="let cat of categories">
+        <button
+          class="category-link"
+          role="tab"
+          type="button"
+          [attr.aria-controls]="cat.id"
+          [attr.aria-selected]="activeCategoryId === cat.id"
+          [attr.aria-current]="activeCategoryId === cat.id ? 'true' : null"
+          [class.active]="activeCategoryId === cat.id"
+          (click)="scrollToCategory(cat.id)">
+          {{ cat.label }}
+        </button>
+      </li>
+    </ul>
+  </aside>
 
-<main class="menu-sections">
-  <section
-    *ngFor="let cat of categories"
-    class="menu-section"
-    [attr.id]="cat.id"
-    #categorySection>
-    <h2 class="section-title"><span>{{ cat.label }}</span></h2>
-
-    <div class="items-grid">
-      <app-menu-item-card
-        *ngFor="let item of cat.items"
-        [item]="item">
-      </app-menu-item-card>
+  <div class="menu-content">
+    <!-- Mobile: compact dropdown selector -->
+    <div class="category-controls">
+      <label class="visually-hidden" for="categorySelect">Browse category</label>
+      <select #catSelect id="categorySelect" class="category-select" (change)="scrollToCategory(catSelect.value)">
+        <option *ngFor="let cat of categories" [value]="cat.id" [selected]="activeCategoryId === cat.id">
+          {{ cat.label }}
+        </option>
+      </select>
     </div>
-  </section>
-</main>
+
+    <main class="menu-sections">
+      <section
+        *ngFor="let cat of categories"
+        class="menu-section"
+        [attr.id]="cat.id"
+        (mouseenter)="activeCategoryId = cat.id"
+        (focusin)="activeCategoryId = cat.id"
+        #categorySection>
+        <h2 class="section-title"><span>{{ cat.label }}</span></h2>
+
+        <div class="items-grid">
+          <app-menu-item-card
+            *ngFor="let item of cat.items"
+            [item]="item">
+          </app-menu-item-card>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
