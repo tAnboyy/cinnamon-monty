@@ -1,0 +1,208 @@
+{
+"Soup": [
+{ "title": "Vegetable hot n sour soup", "price": 6.00 },
+{ "title": "Chicken hot n sour soup", "price": 7.00 },
+{ "title": "Lentil & vegetable shorba", "price": 6.00 },
+{ "title": "Chicken Shorba (Indian soup)", "price": 7.00 }
+],
+"Salads": [
+{ "title": "Indian Salad (onion/cucumber/tomato/carrot/green chilli/lemon/lettuce)", "price": 6.00 },
+{ "title": "Lachha Pyaaz (lemon, chilli, masala)", "price": 2.00 },
+{ "title": "Beans Salad", "price": 6.00 }
+],
+"Appetizer - Veg": [
+{ "title": "Veg samosa 2 pcs", "price": 4.00 },
+{ "title": "Veg cutlet (4 pcs)", "price": 5.00 },
+{ "title": "Crunchy aloo tikki (4 pcs)", "price": 5.00 },
+{ "title": "Paneer-veg kathi roll (4pcs)", "price": 5.00 },
+{ "title": "Tandoori paneer tikka", "price": 7.00 },
+{ "title": "Tandoori soya chap", "price": 7.00 },
+{ "title": "Crispy tofu stick", "price": 6.00 },
+{ "title": "Assorted vegetable pakoda", "price": 6.00 },
+{ "title": "Onion bhajji", "price": 6.00 },
+{ "title": "Mix bhajiya", "price": 6.00 },
+{ "title": "Gobhi 65", "price": 7.00 },
+{ "title": "Batata Vada", "price": 5.00 },
+{ "title": "Vada pao (2)", "price": 5.00 },
+{ "title": "Pav bhaaji (2)", "price": 5.00 }
+],
+"Indo-Chinese": [
+{ "title": "Veg manchurian dry", "price": 7.00 },
+{ "title": "Gobhi manchurian", "price": 7.00 },
+{ "title": "Crispy babycorn", "price": 7.00 },
+{ "title": "Chilli paneer dry", "price": 8.00 },
+{ "title": "Tofu chilli", "price": 8.00 },
+{ "title": "Soya chilli chaap", "price": 8.00 },
+{ "title": "Veg noodle", "price": 10.00 },
+{ "title": "Egg noodle", "price": 11.00 },
+{ "title": "Chicken noodle", "price": 12.00 }
+],
+"Chaat": [
+{ "title": "Samosa chaat", "price": 6.00 },
+{ "title": "Aloo Tikki chaat", "price": 6.00 },
+{ "title": "Dahi bhalla (Dahi vada)", "price": 6.00 },
+{ "title": "Bhel puri", "price": 6.00 },
+{ "title": "Corn chaat", "price": 6.00 }
+],
+"Non Veg": [
+{ "title": "Tandoori chicken tikka boneless", "price": 9.00 },
+{ "title": "Garlic chicken tikka", "price": 9.00 },
+{ "title": "Chicken malai kebab", "price": 9.00 },
+{ "title": "Reshmi chicken sheekh kebab", "price": 9.00 },
+{ "title": "Chicken 65", "price": 9.00 },
+{ "title": "Chilli chicken", "price": 9.00 },
+{ "title": "Tandoori chicken", "price": 9.00 },
+{ "title": "Lamb seekh kebab", "price": 11.00 },
+{ "title": "Masala fried fish", "price": 9.00 },
+{ "title": "Tandoori fish tikka", "price": 9.00 },
+{ "title": "Chilli garlic fish", "price": 9.00 },
+{ "title": "Chilli shrimp", "price": 10.00 },
+{ "title": "Seafood seekh kebab", "price": 10.00 }
+],
+"Paneer": [
+{ "title": "Paneer pasanda", "price": 12.99 },
+{ "title": "Paneer lababdar", "price": 12.99 },
+{ "title": "Shahi paneer", "price": 12.99 },
+{ "title": "Paneer butter masala (Paneer makhani)", "price": 12.99 },
+{ "title": "Saag paneer", "price": 12.99 },
+{ "title": "Paneer bhurji", "price": 12.99 },
+{ "title": "Kadai paneer", "price": 12.99 },
+{ "title": "Pepper Paneer Curry", "price": 12.99 },
+{ "title": "Mutter paneer", "price": 12.99 },
+{ "title": "Malai kofta", "price": 12.99 },
+{ "title": "Tofu tikka masala", "price": 12.99 },
+{ "title": "Tofu mutter", "price": 12.99 },
+{ "title": "Saag tofu", "price": 12.99 },
+{ "title": "Tofu manchurian gravy", "price": 12.99 },
+{ "title": "Chili garlic tofu", "price": 12.99 },
+{ "title": "Dum aloo (stuffed)", "price": 12.99 }
+],
+"Vegies": [
+{ "title": "Veg jalfrezi", "price": 12.00 },
+{ "title": "Kadhai veggies", "price": 12.00 },
+{ "title": "Saag corn", "price": 12.00 },
+{ "title": "Saag aloo", "price": 12.00 },
+{ "title": "Dum aloo kashmiri (baby potato)", "price": 12.00 },
+{ "title": "Aloo gobi mutter", "price": 12.00 },
+{ "title": "Malai gobhi keema", "price": 12.00 },
+{ "title": "Tempered Garlic saag", "price": 12.00 },
+{ "title": "Navratan korma", "price": 12.00 },
+{ "title": "Veg pepper curry", "price": 12.00 },
+{ "title": "Chana saag", "price": 12.00 },
+{ "title": "Eggplant bharta", "price": 12.00 },
+{ "title": "Karari bhindi", "price": 12.00 },
+{ "title": "Bhindi do pyaza /bhindi masala", "price": 12.00 }
+],
+"Lentil/dal": [
+{ "title": "Dal bukhara", "price": 12.00 },
+{ "title": "Dal tadka", "price": 12.00 },
+{ "title": "Rajma masala", "price": 12.00 },
+{ "title": "Kadi pakoda", "price": 12.00 },
+{ "title": "Chana masala", "price": 12.00 },
+{ "title": "Daal panjratni (mix daal)", "price": 12.00 }
+],
+"Non vegie - goat/lamb": [
+{ "title": "Goat nihari", "price": 16.00 },
+{ "title": "Goat vindaloo", "price": 16.00 },
+{ "title": "Cinnamon goat curry", "price": 16.00 },
+{ "title": "Saag goat", "price": 16.00 },
+{ "title": "Pepper goat", "price": 16.00 },
+{ "title": "Goat Bhuna", "price": 16.00 },
+{ "title": "Lamb rogan josh", "price": 16.00 },
+{ "title": "Lamb Saag", "price": 16.00 },
+{ "title": "Lamb Bhuna", "price": 16.00 },
+{ "title": "Lamb korma", "price": 16.00 }
+],
+"Chicken": [
+{ "title": "Chicken tikka masala", "price": 14.00 },
+{ "title": "Cinnamon chicken curry (home style)", "price": 13.99 },
+{ "title": "Butter chicken", "price": 14.00 },
+{ "title": "Chicken tawa masala", "price": 14.00 },
+{ "title": "Kadai chicken", "price": 14.00 },
+{ "title": "Chicken do pyaza", "price": 14.00 },
+{ "title": "Pepper chicken", "price": 14.00 },
+{ "title": "Chicken korma", "price": 14.00 },
+{ "title": "Saag chicken", "price": 14.00 },
+{ "title": "Chicken kalimirch", "price": 14.00 },
+{ "title": "Chicken keema mutter", "price": 14.00 },
+{ "title": "Chicken manchurian gravy", "price": 14.00 }
+],
+"Sea food": [
+{ "title": "Shrimp coconut", "price": 16.00 },
+{ "title": "Shrimp curry", "price": 16.00 },
+{ "title": "Shrimp manchurian gravy", "price": 16.00 },
+{ "title": "Shrimp kadai", "price": 16.00 },
+{ "title": "Shrimp tikka masala", "price": 16.00 },
+{ "title": "Methi Fish curry", "price": 14.00 },
+{ "title": "Fish manchurian gravy", "price": 14.00 },
+{ "title": "Fish coconut curry", "price": 14.00 },
+{ "title": "Cinnamon Fish curry", "price": 14.00 }
+],
+"Egg": [
+{ "title": "Egg curry", "price": 14.00 },
+{ "title": "Egg bhurji", "price": 14.00 }
+],
+"Indo-chinese (Entree)": [
+{ "title": "Veg manchurian with gravy", "price": 12.00 },
+{ "title": "Gobhi manchurian gravy", "price": 11.00 },
+{ "title": "Paneer manchurian", "price": 13.00 },
+{ "title": "Tofu manchurian gravy", "price": 12.00 },
+{ "title": "Tofu broccoli", "price": 12.00 },
+{ "title": "Chilli chicken gravy", "price": 13.99 },
+{ "title": "Chicken manchurian gravy", "price": 13.99 }
+],
+"Breads": [
+{ "title": "Butter naan /Plain", "price": 2.50 },
+{ "title": "Garlic naan", "price": 3.00 },
+{ "title": "Bullet naan", "price": 3.50 },
+{ "title": "Tandoori roti", "price": 2.00 },
+{ "title": "Tawa roti", "price": 1.00 },
+{ "title": "Lacha paratha", "price": 3.00 },
+{ "title": "Mint paratha", "price": 3.00 },
+{ "title": "Stuffed paratha - potato/gobhi/paneer", "price": 3.50 }
+],
+"Rice": [
+{ "title": "Basmati rice", "price": 3.00 },
+{ "title": "Jeera pulao", "price": 3.00 },
+{ "title": "Mutter pulao", "price": 10.00 },
+{ "title": "Vegetable pulao", "price": 10.00 },
+{ "title": "Vegetable dum biryani", "price": 12.00 },
+{ "title": "Kathal biryani (jackfruit)", "price": 12.00 },
+{ "title": "Paneer dum biryani", "price": 12.99 },
+{ "title": "Soya chap dum biryani", "price": 12.00 },
+{ "title": "Chicken dum biryani", "price": 12.99 },
+{ "title": "Goat dum biryani", "price": 15.00 },
+{ "title": "Lamb dum biryani", "price": 15.00 },
+{ "title": "Egg dum biryani", "price": 12.99 },
+{ "title": "Lemon rice", "price": 10.00 },
+{ "title": "Curd rice", "price": 10.00 },
+{ "title": "Vegetable fried rice", "price": 11.00 },
+{ "title": "Chicken fried rice", "price": 13.99 },
+{ "title": "Egg fried rice", "price": 12.00 }
+],
+"Desserts": [
+{ "title": "Mango mousse", "price": 6.00 },
+{ "title": "Chocolate mousse", "price": 6.00 },
+{ "title": "Gulab jamun 2 pcs", "price": 2.00 },
+{ "title": "Moong dal halwa", "price": 6.00 },
+{ "title": "Rasmalai", "price": 4.00 },
+{ "title": "Rasgulla", "price": 4.00 },
+{ "title": "Carrot halwa", "price": 6.00 }
+],
+"Beverage": [
+{ "title": "Mango lassi", "price": 3.00 },
+{ "title": "Sweet lassi", "price": 3.00 },
+{ "title": "Salt lassi", "price": 3.00 },
+{ "title": "Iced teas - sweet & unsweet", "price": 2.00 },
+{ "title": "Soda - coke, pepsi, sprite, orange, ginger ale", "price": 2.00 },
+{ "title": "Masala tea", "price": 2.00 },
+{ "title": "Coffee", "price": 2.00 }
+],
+"Add sides": [
+{ "title": "Mix pickle", "price": 1.00 },
+{ "title": "Papad", "price": 2.00 },
+{ "title": "Green chutney", "price": 2.00 },
+{ "title": "Raita - vegetable/boondi", "price": 3.00 },
+{ "title": "Chicken nugget n fries", "price": 8.00 }
+]
+}
