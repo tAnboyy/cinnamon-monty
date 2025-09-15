@@ -8,4 +8,8 @@ export const routes: Routes = [{
     path: 'menu',
     pathMatch: 'full',
     loadComponent: () => import('./components/menu/menu.component').then(m => m.MenuComponent)
+}, {
+    path: 'OnlineOrders',
+    pathMatch: 'full',
+    loadComponent: () => import('./components/online-orders/online-orders.component').then(m => m.OnlineOrdersComponent)
 }];

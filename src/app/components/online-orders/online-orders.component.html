@@ -1,2 +1,112 @@
-<p>online-orders works!</p>
-<app-scrolling-menu [p1]="message()"></app-scrolling-menu>
+<header class="hero">
+  <div class="hero-inner">
+    <h1 class="hero-title">Order Online</h1>
+    <p class="hero-subtitle">Freshly prepared, ready for pickup</p>
+  </div>
+</header>
+
+<div class="orders-layout">
+  <!-- Categories sidebar -->
+  <aside class="category-sidebar" aria-label="Menu sections">
+    <ul class="category-list" role="tablist">
+      <li *ngFor="let cat of categories">
+        <button
+          class="category-link"
+          role="tab"
+          type="button"
+          [attr.aria-controls]="cat.id"
+          [attr.aria-selected]="activeCategoryId === cat.id"
+          [attr.aria-current]="activeCategoryId === cat.id ? 'true' : null"
+          [class.active]="activeCategoryId === cat.id"
+          (click)="scrollToCategory(cat.id)">
+          {{ cat.label }}
+        </button>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Main content -->
+  <div class="orders-content">
+    <div class="category-controls">
+      <label class="visually-hidden" for="categorySelect">Browse category</label>
+      <select #catSelect id="categorySelect" class="category-select" [value]="activeCategoryId || ''" (change)="scrollToCategory(catSelect.value)">
+        <option *ngFor="let cat of categories" [value]="cat.id">
+          {{ cat.label }}
+        </option>
+      </select>
+    </div>
+
+    <main class="menu-sections">
+      <section
+        *ngFor="let cat of categories"
+        class="menu-section"
+        [attr.id]="cat.id"
+        #categorySection
+        (mouseenter)="activeCategoryId = cat.id"
+        (focusin)="activeCategoryId = cat.id">
+        <h2 class="section-title"><span>{{ cat.label }}</span></h2>
+
+        <div class="items-grid">
+          <div class="item-card" *ngFor="let item of cat.items">
+            <app-menu-item-card [item]="item"></app-menu-item-card>
+
+            <div class="item-actions">
+              <ng-container *ngIf="qtyFor(item) === 0; else qtyCtrls">
+                <button class="btn add" (click)="addToCart(item)">Add</button>
+              </ng-container>
+              <ng-template #qtyCtrls>
+                <div class="qty-controls" role="group" aria-label="Quantity controls">
+                  <button class="btn qty" (click)="dec(item)" aria-label="Decrease quantity">−</button>
+                  <span class="qty">{{ qtyFor(item) }}</span>
+                  <button class="btn qty" (click)="inc(item)" aria-label="Increase quantity">+</button>
+                </div>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Cart sidebar -->
+  <aside class="cart" aria-label="Cart">
+    <div class="cart-inner">
+      <div class="cart-head">
+        <h2 class="cart-title">Your Cart</h2>
+        <span class="cart-count" aria-live="polite">{{ cartCount() }} items</span>
+      </div>
+
+      <div class="cart-items" *ngIf="cartItems().length; else emptyCart">
+        <div class="cart-row" *ngFor="let ci of cartItems()">
+          <div class="cart-row-main">
+            <span class="cart-item-title">{{ ci.item.title }}</span>
+            <span class="cart-line">
+              <button class="btn tiny" (click)="dec(ci.item)" aria-label="Decrease">−</button>
+              <span class="cart-qty">{{ ci.qty }}</span>
+              <button class="btn tiny" (click)="inc(ci.item)" aria-label="Increase">+</button>
+            </span>
+          </div>
+          <div class="cart-row-meta">
+            <span class="cart-price">{{ ci.item.price | currency:'USD':'symbol':'1.2-2' }}</span>
+            <span class="cart-line-total">{{ (ci.item.price * ci.qty) | currency:'USD':'symbol':'1.2-2' }}</span>
+          </div>
+        </div>
+
+        <div class="cart-footer">
+          <div class="cart-subtotal">
+            <span>Subtotal</span>
+            <strong>{{ cartSubtotal() | currency:'USD':'symbol':'1.2-2' }}</strong>
+          </div>
+          <div class="cart-actions">
+            <button class="btn ghost" (click)="clearCart()" [disabled]="!cartItems().length">Clear</button>
+            <button class="btn primary" disabled title="Checkout disabled for demo">Checkout</button>
+          </div>
+        </div>
+      </div>
+
+      <ng-template #emptyCart>
+        <p class="empty">Your cart is empty. Add something tasty!</p>
+      </ng-template>
+    </div>
+  </aside>
+</div>
