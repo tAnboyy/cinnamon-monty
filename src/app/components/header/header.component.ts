@@ -16,7 +16,7 @@ export class HeaderComponent {
     { label: 'Home', path: '/' },
     { label: 'Menu', path: '/menu' },
     { label: 'Chef', path: '/chef' },
-    { label: 'Reservations', path: '/reservations' },
+    { label: 'OnlineOrders', path: '/OnlineOrders' },
     { label: 'Contact', path: '/contact' }
   ];
 }
