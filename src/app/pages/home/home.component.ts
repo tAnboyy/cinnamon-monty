@@ -10,7 +10,7 @@ type Category = { id: string; label: string; items: MenuItem[] };
   standalone: true,
   imports: [NgFor],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
   categories: Category[] = Object.entries(menuData).map(([label, items]) => ({

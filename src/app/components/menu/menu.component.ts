@@ -2,7 +2,6 @@ import { NgFor, isPlatformBrowser } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, Inject, OnDestroy, PLATFORM_ID, QueryList, ViewChildren } from '@angular/core';
 import { MenuItemCardComponent } from '../../menu-item-card/menu-item-card.component';
 import menuData from './menu-data.json';
-import { CategoriesComponent } from '../categories/categories.component';
 
 type MenuItem = { title: string; price: number };
 type Category = { id: string; label: string; items: MenuItem[] };
@@ -10,7 +9,7 @@ type Category = { id: string; label: string; items: MenuItem[] };
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [NgFor, MenuItemCardComponent, CategoriesComponent],
+  imports: [NgFor, MenuItemCardComponent],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss'
 })
