@@ -12,4 +12,20 @@ export const routes: Routes = [{
     path: 'OnlineOrders',
     pathMatch: 'full',
     loadComponent: () => import('./components/online-orders/online-orders.component').then(m => m.OnlineOrdersComponent)
+}, {
+    path: 'contact',
+    pathMatch: 'full',
+    redirectTo: 'ContactUs'
+}, {
+    path: 'contactus',
+    pathMatch: 'full',
+    redirectTo: 'ContactUs'
+}, {
+    path: 'contact-us',
+    pathMatch: 'full',
+    redirectTo: 'ContactUs'
+}, {
+    path: 'ContactUs',
+    pathMatch: 'full',
+    loadComponent: () => import('./components/contact-us/contact-us.component').then(m => m.ContactUsComponent)
 }];

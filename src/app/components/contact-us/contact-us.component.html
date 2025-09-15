@@ -1,0 +1,78 @@
+<header class="hero" aria-labelledby="contactHeading">
+  <div class="hero-inner">
+    <h1 id="contactHeading" class="hero-title">Contact Us</h1>
+    <p class="hero-subtitle">We’d love to hear from you</p>
+  </div>
+</header>
+
+<section class="contact-layout" aria-label="Contact Cinnamon">
+  <!-- Left: Contact details -->
+  <aside class="info">
+    <div class="card">
+      <h2 class="card-title">Get in touch</h2>
+      <ul class="list">
+        <li>
+          <span class="label">Phone</span>
+          <a href="tel:+1-000-000-0000">(000) 000-0000</a>
+        </li>
+        <li>
+          <span class="label">Email</span>
+          <a href="mailto:hello&#64;cinnamon.example">hello&#64;cinnamon.example</a>
+        </li>
+        <li>
+          <span class="label">Address</span>
+          <address>
+            123 Spice Lane<br/>
+            Charlotte, NC 28202
+          </address>
+        </li>
+        <li>
+          <span class="label">Hours</span>
+          <div>
+            Mon–Thu: 11:00 AM – 9:00 PM<br/>
+            Fri–Sat: 11:00 AM – 10:00 PM<br/>
+            Sun: 12:00 PM – 8:00 PM
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card map">
+      <div class="map-placeholder" role="img" aria-label="Map placeholder"></div>
+      <a class="map-link" target="_blank" rel="noopener" href="https://maps.google.com" aria-label="Open in Google Maps">Open in Google Maps</a>
+    </div>
+  </aside>
+
+  <!-- Right: Contact form (static) -->
+  <div class="form-wrap">
+    <div class="card">
+      <h2 class="card-title">Send a message</h2>
+      <form (submit)="onSubmit($event)" novalidate>
+        <div class="grid">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required placeholder="Your name" />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required placeholder="you@example.com" />
+          </label>
+          <label>
+            <span>Phone</span>
+            <input type="tel" name="phone" placeholder="(555) 123-4567" />
+          </label>
+          <label class="full">
+            <span>Message</span>
+            <textarea name="message" rows="5" required placeholder="How can we help?"></textarea>
+          </label>
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn primary">Send</button>
+          <button type="reset" class="btn" (click)="reset()">Clear</button>
+        </div>
+        <p class="note">This is a static demo. Messages aren’t sent yet.</p>
+        <p class="success" *ngIf="submitted()" aria-live="polite">Thanks! We’ll get back to you soon.</p>
+      </form>
+    </div>
+  </div>
+</section>
